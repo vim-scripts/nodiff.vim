@@ -1,0 +1,3 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1198
+
+This script provides :Nodiff command, which turns off the diff mode in each window.  When called as :Nodiff! it will turn off the diff mode in all existing buffers including the hidden ones.
