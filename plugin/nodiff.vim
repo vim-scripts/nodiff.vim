@@ -2,7 +2,7 @@
 " Name Of File: nodiff.vim
 " Description:  global plugin for getting out of the diff mode
 " Maintainer:   Pavol Juhas (juhas@seas.upenn.edu)
-" Last Change:  Thu Feb 3, 2005
+" Last Change:  Thu Feb 4, 2005
 "
 " Usage:        Normally, this file should reside in the plugins
 "               directory and be automatically sourced.  If not, you need
@@ -13,7 +13,7 @@
 "                 :Nodiff   turns off the diffmode for each window
 "                 :Nodiff!  turns off the diffmode for each window and buffer
 "
-" Version: 1.1
+" Version: 1.2
 "=======================================================================
 
 if exists("loaded_nodiff")
@@ -29,7 +29,7 @@ function! s:Nodiff(bang)
     if a:bang == "!"
 	let last = bufnr("$")
 	let nr = 1
-	while nr < last
+	while nr <= last
 	    if bufexists(nr) && getbufvar(nr, '&diff')
 		call setbufvar(nr, '&diff', 0)
 		call setbufvar(nr, '&scb', 0)
